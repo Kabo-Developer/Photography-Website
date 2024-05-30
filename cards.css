@@ -1,0 +1,256 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.wrapper {
+    width: 100%;
+    min-height: 100vh;
+	margin-top: -8%;
+	padding: 10px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.serv-container {
+    height: 300px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: start;
+}
+
+.card {
+    width: 50px;
+    border-radius: .75em;
+    background-size: cover;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 2em;
+    margin-top: -5em;
+    display: flex;
+    align-items: flex-end;
+    transition: .6s cubic-bezier(.28, -0.03, 0, .99);
+    box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.8);
+}
+
+    .card > .row {
+        color: white;
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+        .card > .row > .icon {
+            background-image: linear-gradient(95deg, #808080, #000000);
+            color: white;
+            border-radius: 100%;
+            width: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 15px;
+            font-weight: 600;
+        }
+
+        .card > .row .description {
+            background-image: linear-gradient(95deg, #808080, #000000);
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            overflow: hidden;
+            height: 120px;
+            width: 520px;
+            opacity: 0;
+            transform: translateY(30px);
+            transition-delay: .3s;
+            transition: all .3s ease;
+        }
+
+.description p {
+    color: #ffffff;
+    padding-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.description h4 {
+    text-transform: uppercase;
+}
+
+input {
+    display: none;
+}
+
+    input:checked + label {
+        width: 600px;
+    }
+
+        input:checked + label .description {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+        }
+
+.more-info{
+	font-style: italic;
+	font-weight: 200;
+	font-size: 15px;
+	color: red;
+	text-align: center;
+	display: none;
+}
+
+.card[for="c1"] {
+    background-image: url('BicoImages/Studio Snap7.jpg');
+}
+
+.card[for="c2"] {
+    background-image: url('BicoImages/Event24.jpg');
+}
+
+.card[for="c3"] {
+    background-image: url('BicoImages/Wedding Snap4.jpg');
+}
+
+.card[for="c4"] {
+    background-image: url('BicoImages/Event3.jpg');
+}
+
+.card[for="c5"] {
+    background-image: url('BicoImages/Farewell Snap1.jpg');
+}
+
+.card[for="c6"] {
+    background-image: url('BicoImages/Drone4.jpg');
+}
+
+
+/* Smartphone Styles */
+@media (max-width: 768px) {
+    .wrapper {
+		margin-top: -45%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .serv-container {
+		display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .card {
+        width: 100%;
+        margin-top: 10px;
+        border-radius: 1em;
+		
+    }
+
+    input:checked + label {
+        width: 100%;
+    }
+
+    .card > .row .description {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+		height: 100px;
+        width: 450px;
+    }
+	
+	.description p {
+    color: #ffffff;
+    padding-top: 15px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+	}
+	
+	.more-info{
+	font-style: italic;
+	font-weight: 100;
+	font-size: 15px;
+	color: red;
+	text-align: center;
+	display: block;
+	margin: 35px 5px;
+	}
+
+}
+
+/* Lightbox Styles */
+/*.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+    .lightbox.active {
+        display: flex;
+    }
+
+.lightbox-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 90%;
+    max-height: 90%;
+    overflow-y: auto;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}*/
+
+@media (max-width: 600px){
+	.wrapper{
+		display: flex;
+		flex-direction: column;
+	}
+	
+	.card {
+        width: 100%;
+        margin-top: 20px;
+        border-radius: 1em;
+		margin-top: 1em;
+    }
+	
+	.card > .row .description {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+	
+	.card > .row > .icon {
+        background-image: linear-gradient(95deg, #808080, #000000);
+        color: white;
+        border-radius: 100%;
+        width: 25px;
+		height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+        font-weight: 600;
+    }
+}
+
